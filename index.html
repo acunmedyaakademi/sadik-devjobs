@@ -6,16 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev Jobs</title>
 
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
 </head>
 
 <body>
-  
+
   <header class="header">
 
-  </header>
+    <img class="company-logo" src="assets/images/devjobs.svg" alt="devjobs">
 
+    <div class="theme-container">
+
+      <i class="fa-regular fa-sun"></i>
+      <label for="theme-btn" id="theme-label">
+        <input type="checkbox" id="theme-btn">
+      </label>
+      <i class="fa-regular fa-moon"></i>
+
+    </div>
+    
+    <div class="filter-container">
+      <input type="text">
+      <i class="fa-solid fa-filter"></i>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    
+  </header>
+  
   <main class="container">
+
+    <div class="contents">
+
+      <div class="card">
+        <img src="logos/Blogr.svg" alt="">
+        <div class="timeline">
+          <span>5h ago</span>
+          <span>.</span>
+          <span>Full Time</span>
+        </div>
+        <h3>Senior Software Engineer</h3>
+        <p class="card-company">Scoot</p>
+        <p class="card-country">United States</p>
+      </div>
+
+    </div>
+
+    <div class="load-more-container">
+      <button class="load-more">Load More</button>
+    </div>
 
   </main>
 
