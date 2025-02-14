@@ -75,8 +75,8 @@ h6 {
   --midnight: #121721;
   --input-text-light: #19202d80;
   --input-text-dark: #ffffff80;
-  --card-span-color: #6E8098;
-
+  --bg-checkbox-light: #19202d1b;
+  --bg-checkbox-dark: #ffffff1b;
 }
 
 [data-theme="light"] {
@@ -84,8 +84,8 @@ h6 {
   --bg-item-color: var(--white);
   --h3-color: var(--very-dark-blue);
   --input-text-color: var(--input-text-light);
-  --filter-color: #6E8098;
-  --card-span-color: #6E8098;
+  --filter-color: var(--dark-grey);
+  --bg-checkbox-color: var(--bg-checkbox-light);
 }
 
 [data-theme="dark"] {
@@ -94,7 +94,7 @@ h6 {
   --h3-color: var(--white);
   --input-text-color: var(--input-text-dark);
   --filter-color: var(--white);
-  --card-span-color: #6E8098;
+  --bg-checkbox-color: var(--bg-checkbox-dark);
 }
 
 
@@ -102,7 +102,6 @@ body {
   -webkit-font-smoothing: antialiased;
   max-width: 375px;
   margin: auto;
-  background-color: var(--bg-color);
 }
 
 .header {
@@ -133,13 +132,14 @@ body {
       padding: 5px;
       border-radius: 12px;
       display: inline-block;
+      cursor: pointer;
       background-color: var(--white);
 
       &::after {
         content: "";
         width: 14px;
         height: 14px;
-        background-color: #5964E0;
+        background-color: var(--violet);
         border-radius: 50%;
         position: absolute;
       }
@@ -179,22 +179,130 @@ body {
 
   .fa-filter {
     color: var(--filter-color);
+    cursor: pointer;
   }
 
   .fa-magnifying-glass {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 14px;
-    background-color: #5964E0;
+    background-color: var(--violet);
     border-radius: 5px;
   }
 
 }
 
+
+
+.mabile-dialog {
+  width: 327px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--bg-item-color);
+
+  .mabile-dialog-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .filter-location-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #6e809833;
+    padding: 24px;
+
+    #filter-location-label {
+      cursor: pointer;
+
+      .fa-location-dot {
+        font-size: 23px;
+        color: var(--violet);
+      }
+
+    }
+
+    #filter-location {
+      font-size: 16px;
+      line-height: 19.84px;
+      color: var(--input-text-color);
+      background-color: var(--bg-color);
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .job-time-container {
+    display: flex;
+    align-items: center;
+    padding-inline: 24px;
+    gap: 16px;
+
+
+    #job-time {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background-color: var(--bg-checkbox-color);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #5964e040;
+      }
+
+      &:checked {
+        background-color: var(--violet);
+      }
+
+      &:checked::after {
+        content: "✓";
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 2px;
+      }
+    }
+
+    #job-time-label {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.84px;
+      cursor: pointer;
+      color: var(--h3-color);
+    }
+  }
+
+  .dialog-form-btn {
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--violet);
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.84px;
+    margin: 0 24px 24px 24px;
+    border-radius: 5px;
+    padding-block: 16px;
+  }
+}
+
+
+
 .container {
   padding-inline: 24px;
   padding-top: 97px;
+  background-color: var(--bg-color);
 }
 
 .contents {
@@ -205,6 +313,7 @@ body {
     margin-bottom: 49px;
     position: relative;
     background-color: var(--bg-item-color);
+    cursor: pointer;
 
     img {
       position: absolute;
@@ -216,7 +325,7 @@ body {
       font-weight: 400;
       font-size: 16px;
       line-height: 19.84px;
-      color: var(--card-span-color);
+      color: var(--dark-grey);
     }
 
     .timeline {
@@ -232,7 +341,7 @@ body {
 
     .card-company {
       margin-bottom: 40px;
-      color: var(--card-span-color);
+      color: var(--dark-grey);
     }
 
     .card-country {
@@ -242,17 +351,17 @@ body {
   }
 }
 
-.load-more-container{
+.load-more-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 62px;
+  padding-bottom: 62px;
 }
 
 .load-more {
   cursor: pointer;
   align-items: center;
-  background-color: #1461f0;
+  background-color: var(--violet);
   border: none;
   border-radius: 5px;
   padding: 16px 31px 16px 30px;
