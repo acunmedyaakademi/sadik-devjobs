@@ -58,12 +58,6 @@ h6 {
   isolation: isolate;
 }
 
-
-
-
-
-
-
 :root {
   --violet: #5964E0;
   --light-violet: #939BF4;
@@ -96,7 +90,6 @@ h6 {
   --filter-color: var(--white);
   --bg-checkbox-color: var(--bg-checkbox-dark);
 }
-
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -151,6 +144,10 @@ body {
   }
 }
 
+.filter-tablet-container {
+  display: none;
+}
+
 .filter-container {
   display: flex;
   align-items: center;
@@ -194,8 +191,6 @@ body {
 
 }
 
-
-
 .mabile-dialog {
   position: absolute;
   top: 50%;
@@ -220,17 +215,17 @@ body {
     gap: 16px;
     border-bottom: 1px solid #6e809833;
     padding: 24px;
-    
+
     #filter-location-label {
       cursor: pointer;
-      
+
       .fa-location-dot {
         font-size: 23px;
         color: var(--violet);
       }
-      
+
     }
-    
+
     #filter-location {
       font-size: 16px;
       line-height: 19.84px;
@@ -301,8 +296,6 @@ body {
   }
 }
 
-
-
 .container {
   padding-inline: 24px;
   padding-top: 97px;
@@ -318,6 +311,7 @@ body {
     position: relative;
     background-color: var(--bg-item-color);
     cursor: pointer;
+    border-radius: 6px;
 
     img {
       position: absolute;
@@ -363,6 +357,8 @@ body {
 }
 
 .load-more {
+  width: 141px;
+  height: 48px;
   cursor: pointer;
   align-items: center;
   background-color: var(--violet);
@@ -373,4 +369,138 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 19.84px;
+}
+
+@media(min-width :768px) {
+
+  body {
+    max-width: 768px;
+  }
+
+  .header {
+    background-image: url('/assets/images/tablet-header.png');
+    background-color: var(--bg-color);
+    padding-inline: 39px;
+
+    .filter-container {
+      display: none;
+    }
+
+    .filter-tablet-container {
+      width: 689px;
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      background-color: var(--bg-item-color);
+      position: absolute;
+      top: 96px;
+      left: 39px;
+
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: var(--bg-item-color);
+        color: var(--input-text-color);
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 24px;
+        color: var(--violet);
+      }
+
+      .filter-title,
+      .filter-location-container {
+        width: 220px;
+        font-size: 16px;
+        line-height: 19.84px;
+        font-weight: 400;
+        border-right: 1px solid #6e809833;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 28px 4px 28px 24px;
+
+      }
+
+      .job-filter-container {
+        width: 252px;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 16px 16px 20px;
+
+
+        .job-time-item {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+
+          #job-full-time {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background-color: var(--bg-checkbox-color);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 24px;
+
+            &:hover {
+              background-color: #5964e040;
+            }
+
+            &:checked {
+              background-color: var(--violet);
+            }
+
+            &:checked::after {
+              content: "✓";
+              color: var(--white);
+              font-size: 16px;
+              font-weight: 700;
+              padding-bottom: 2px;
+            }
+          }
+
+          #job-full-time-label {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19.84px;
+            cursor: pointer;
+            color: var(--h3-color);
+          }
+        }
+
+        .dialog-form-btn {
+          width: 80px;
+          cursor: pointer;
+          align-items: center;
+          background-color: var(--violet);
+          border: none;
+          color: var(--white);
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 19.84px;
+          border-radius: 5px;
+          padding: 16px 14px;
+        }
+      }
+    }
+  }
+
+  .container {
+    padding-top: 110px;
+    padding-inline: 39px;
+  }
+
+  .contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 11px;
+    margin-bottom: 7px;
+  }
 }
