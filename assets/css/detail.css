@@ -1,0 +1,286 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --violet: #5964E0;
+  --white: #FFF;
+  --light-grey: #F4F6F8;
+  --dark-grey: #6E8098;
+  --very-dark-blue: #19202D;
+  --midnight: #121721;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--light-grey);
+  --bg-item-color: var(--white);
+  --h3-color: var(--very-dark-blue);
+  --text-color: var(--dark-grey);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--midnight);
+  --bg-item-color: var(--very-dark-blue);
+  --h3-color: var(--white);
+  --text-color: var(--dark-grey);
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  max-width: 375px;
+  margin: auto;
+}
+
+.header {
+  background-image: url('/assets/images/header.png');
+  padding: 32px 24px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .theme-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    i {
+      color: var(--white);
+    }
+
+    #theme-btn {
+      display: none;
+    }
+
+    #theme-label {
+      width: 48px;
+      height: 24px;
+      padding: 5px;
+      border-radius: 12px;
+      display: inline-block;
+      cursor: pointer;
+      background-color: var(--white);
+
+      &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: var(--violet);
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      &:has(input:checked)::after {
+        transform: translateX(24px);
+      }
+    }
+  }
+
+}
+
+.card {
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-radius: 6px;
+  background-color: var(--bg-item-color);
+  position: absolute;
+  top: 121px;
+
+
+  img {
+    margin-top: -25px;
+  }
+
+  .card-company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      margin-bottom: 13px;
+      color: var(--h3-color);
+    }
+
+    p {
+      color: var(--dark-grey);
+    }
+  }
+
+  .company-site {
+    font-size: 16px;
+    line-height: 19.84px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    padding: 16px 21px 16px 20px;
+    border-radius: 5px;
+    border: none;
+    color: var(--violet);
+    background-color: #5964e01a;
+    cursor: pointer;
+  }
+
+}
+
+.container {
+  padding-block: 214px 64px;
+  background-color: var(--bg-color);
+  padding-inline: 24px;
+}
+
+.contents {
+  padding: 40px 25px;
+  border-radius: 6px;
+  background-color: var(--bg-item-color);
+  
+  .company-contents {
+    margin-bottom: 32px;
+
+    .company-contents-info {
+      .timeline {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 8px;
+        color: var(--dark-grey);
+      }
+
+      h3 {
+        margin-bottom: 12px;
+        color: var(--h3-color);
+      }
+
+      .company {
+        margin-bottom: 54px;
+        color: var(--violet);
+      }
+    }
+  }
+}
+
+.apply {
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19.84px;
+  font-weight: 700;
+  width: 100%;
+  background-color: var(--violet);
+  color: var(--white);
+  padding-block: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.content-text {
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+h3 {
+  color: var(--h3-color);
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+.requirements,
+.role {
+  margin-bottom: 28px;
+}
+
+.requirements-content,
+.role-content {
+  margin-bottom: 32px;
+}
+
+.requirements-item-list {
+  padding-left: 16px;
+  margin-bottom: 40px;
+
+  li{
+
+    padding-left: 32px;
+    &::marker{
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--violet);
+    }
+  }
+}
+
+.role-item-list{
+  padding-left: 16px;
+  
+  li{
+    padding-left: 28px;
+    &::marker{
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--violet);
+    }
+  }
+}
+
+.footer{
+  padding: 25px 24px 23px;
+  background-color: var(--bg-item-color);
+
+  .footer-content{
+    display: none;
+  }
+}

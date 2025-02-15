@@ -197,6 +197,10 @@ body {
 
 
 .mabile-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
   width: 327px;
   padding: 0;
   border: none;
@@ -216,22 +220,22 @@ body {
     gap: 16px;
     border-bottom: 1px solid #6e809833;
     padding: 24px;
-
+    
     #filter-location-label {
       cursor: pointer;
-
+      
       .fa-location-dot {
         font-size: 23px;
         color: var(--violet);
       }
-
+      
     }
-
+    
     #filter-location {
       font-size: 16px;
       line-height: 19.84px;
       color: var(--input-text-color);
-      background-color: var(--bg-color);
+      background-color: var(--bg-item-color);
       border: none;
       outline: none;
       cursor: pointer;
