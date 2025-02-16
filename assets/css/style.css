@@ -379,8 +379,9 @@ body {
 
   .header {
     background-image: url('/assets/images/tablet-header.png');
+    height: 160px;
     background-color: var(--bg-color);
-    padding-inline: 39px;
+    padding: 42px 40px 86px 39px;
 
     .filter-container {
       display: none;
@@ -393,7 +394,7 @@ body {
       border-radius: 6px;
       background-color: var(--bg-item-color);
       position: absolute;
-      top: 96px;
+      top: 120px;
       left: 39px;
 
       input {
@@ -477,6 +478,7 @@ body {
 
         .dialog-form-btn {
           width: 80px;
+          height: 48px;
           cursor: pointer;
           align-items: center;
           background-color: var(--violet);
