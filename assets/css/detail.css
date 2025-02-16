@@ -293,7 +293,7 @@ h3 {
 
 .role-item-list {
   padding-left: 16px;
-  
+
   li {
     padding-left: 28px;
     counter-increment: list-counter;
@@ -428,4 +428,45 @@ h3 {
 
   }
 
-} 
+}
+
+@media(min-width:1440px) {
+
+  body {
+    max-width: 1440px;
+  }
+
+  .header {
+    background-image: url('/assets/images/pc-header.png');
+    height: 160px;
+    padding: 45px 165px 85px 165px;
+
+    .card {
+      z-index: 2;
+      width: 730px;
+      top: 120px;
+      left: 355px;
+
+      .company-site {
+        width: 147px;
+        height: 48px;
+
+        background-color: var(--bg-color-tablet-company-site);
+        color: var(--color-tablet-company-site);
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+    padding-block: 131px 80px;
+    padding-inline: 355px;
+  }
+
+  .footer {
+    padding-inline: 355px;
+  }
+
+}
