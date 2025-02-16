@@ -307,7 +307,7 @@ body {
 
   .card {
     padding: 49px 9px 32px 32px;
-    margin-bottom: 49px;
+    margin-bottom: 65px;
     position: relative;
     background-color: var(--bg-item-color);
     cursor: pointer;
@@ -448,7 +448,6 @@ body {
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            width: 24px;
 
             &:hover {
               background-color: #5964e040;
@@ -488,7 +487,7 @@ body {
           font-weight: 700;
           line-height: 19.84px;
           border-radius: 5px;
-          padding: 16px 14px;
+          padding-block: 16px;
         }
       }
     }
@@ -505,4 +504,69 @@ body {
     column-gap: 11px;
     margin-bottom: 7px;
   }
+}
+
+@media(min-width:1440px) {
+
+  body {
+    max-width: 1440px;
+  }
+
+  .header {
+    background-image: url('/assets/images/pc-header.svg');
+
+    .filter-tablet-container {
+      width: 1110px;
+      left: 165px;
+
+      .filter-title {
+        width: 463px;
+        padding: 28px 4px 28px 32px;
+      }
+
+      .filter-location-container {
+        width: 300px;
+        padding: 28px 4px 28px 23px;
+      }
+
+      .job-filter-container {
+        width: 345px;
+        padding: 16px 16px 16px 26px;
+
+
+        .job-time-item {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+
+          #job-full-time {
+            border-radius: 3px;
+            width: 24px;
+          }
+
+          #job-full-time-label::after {
+            content: " Only";
+          }
+
+        }
+
+        .dialog-form-btn {
+          width: 123px;
+        }
+      }
+    }
+  }
+
+  .container {
+    padding-top: 119px;
+    padding-inline: 165px;
+  }
+
+  .contents {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 7px;
+  }
+
 }
