@@ -513,7 +513,7 @@ body {
   }
 
   .header {
-    background-image: url('/assets/images/pc-header.svg');
+    background-image: url('/assets/images/pc-header.png');
 
     .filter-tablet-container {
       width: 1110px;
