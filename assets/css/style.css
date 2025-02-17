@@ -311,6 +311,7 @@ body {
     position: relative;
     background-color: var(--bg-item-color);
     cursor: pointer;
+    text-decoration: none;
     border-radius: 6px;
 
     img {
@@ -329,6 +330,7 @@ body {
     .timeline {
       display: flex;
       align-items: center;
+      gap: 12px;
       margin-bottom: 13px;
     }
 
